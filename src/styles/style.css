@@ -87,4 +87,30 @@ form button {
   font-weight: bold;
   border-radius: 20px;
   width: 200px;
+}
+
+.modal {
+  position: fixed;
+  height: 70vh;
+  width: 50vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(70, 70, 70);
+  padding: 40px;
+  border-radius: 20px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.modal h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.modal h2 {
+  color: #fff;
+}
+.modal h2 span {
+  color: gold;
 }/*# sourceMappingURL=style.css.map */

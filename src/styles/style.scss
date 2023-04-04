@@ -87,3 +87,30 @@ form{
         width: 200px;
     }
 }
+
+.modal{
+    position: fixed;
+    height: 70vh;
+    width: 50vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(70, 70, 70);
+    padding: 40px;
+    border-radius: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    h1{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    h2{
+        color: #fff;
+        span{
+            color: gold;
+        }
+    }
+    
+}

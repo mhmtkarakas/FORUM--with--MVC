@@ -1,7 +1,8 @@
 import React from 'react'
 import Header from './../../components/Header';
+import Modal from '../../components/Modal';
 
-function ListPostView({blogData}) {
+function ListPostView({blogData, showModal,showUserPost,userPosts}) {
 
   return (
     <>
@@ -12,14 +13,15 @@ function ListPostView({blogData}) {
           <div className='post' key={post.id}>
           <div className='post-info'>
             <h1>{post.title}</h1>
-            <p>{post.user}</p>
+            <p onClick={()=>showUserPost(post.user)}>{post.user}</p>
           </div>
           <p className='post-text'>{post.text}</p>
           </div>
         ))
       }
     </div>
-    </>
+    <Modal showModal={showModal} userPosts={userPosts} />
+    </> 
   )
 }
 

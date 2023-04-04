@@ -1,9 +1,9 @@
 import Header from "../../components/Header";
 
-const AddPostView = ({ onInputChange }) => (
+const AddPostView = ({ onInputChange, handleSubmit }) => (
   <>
     <Header addLink />
-    <form>
+    <form onSubmit={handleSubmit}>
       <fieldset>
         <label htmlFor="">Kullanici Adi</label>
         <input
@@ -26,7 +26,7 @@ const AddPostView = ({ onInputChange }) => (
         onChange={(e) => onInputChange("text", e.target.value)}/>
       </fieldset>
 
-      <button>Gonder</button>
+      <button type="submit">Gonder</button>
     </form>
   </>
 );
