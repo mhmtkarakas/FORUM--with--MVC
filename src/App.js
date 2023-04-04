@@ -1,12 +1,22 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ListPostController from './pages/ListPost/ListPostController';
+
+import './styles/style.css'
+import AddPostController from './pages/AddPost/AddPostController';
 
 
 function App() {
  
 
   return (
-     <div>Merhaba</div>
+     <BrowserRouter >
+     <Routes>
+      <Route path="/" element={<ListPostController />} />
+      <Route path="/add-post" element={<AddPostController />} />
+     </Routes >
+     </BrowserRouter>
   );
 }
 

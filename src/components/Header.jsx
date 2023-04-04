@@ -1,10 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({addLink}) => {
   return (
     <header>
         <h1>Forum</h1>
-        <a href="/">Post At</a>
+        {
+          addLink ? (
+            <Link to={"/"}>Anasayfaya Don</Link>
+          ) : (
+            <Link to={"/add-post"}>Gonderi Olustur</Link>
+          )
+        }
+        
     </header>
   )
 }

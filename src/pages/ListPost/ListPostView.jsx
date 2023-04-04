@@ -1,12 +1,25 @@
 import React from 'react'
 import Header from './../../components/Header';
 
-function ListPostView() {
+function ListPostView({blogData}) {
+
   return (
-    <div>
+    <>
     <Header />
-    Liste
+    <div className="container">
+      {
+        blogData.map((post)=>(
+          <div className='post' key={post.id}>
+          <div className='post-info'>
+            <h1>{post.title}</h1>
+            <p>{post.user}</p>
+          </div>
+          <p className='post-text'>{post.text}</p>
+          </div>
+        ))
+      }
     </div>
+    </>
   )
 }
 

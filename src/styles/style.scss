@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+}
+header{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    h1{
+        text-transform: uppercase;
+        color: rgb(209, 209, 17);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+}
+body{
+    background-color: gray;
+}
+//LISTE
+.container{
+    
+    width: 70vw;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.post{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    &-info{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p{
+        cursor: pointer;
+        color:rgb(209, 209, 17) ;
+        font-weight: bold;
+        font-size: large;
+      }
+    }
+    &-text{
+        margin-top: 20px;
+    }
+}
+
+// Ekleme Sayfasi
+form{
+    width: 30vw;
+    height: 70vh;
+    margin: 200px auto;
+    background-color: rgb(36, 35, 35);
+    padding: 50px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+    fieldset{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        border: none;
+        input{
+        padding: 5px 20px;
+        border-radius: 4px;
+        }
+        textarea{
+            resize: vertical;
+            min-height: 50px;
+            max-height: 150px;
+            border-radius: 4px;
+            padding: 20px;
+        }
+    }
+    button{
+        margin:0 auto;
+        padding: 10px 10px;
+        background-color: gold;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 20px;
+        width: 200px;
+    }
+}
