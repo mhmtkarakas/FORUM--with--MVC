@@ -15,15 +15,16 @@ const AddPostView = ({ onInputChange, handleSubmit }) => (
 
       <fieldset>
         <label htmlFor="">Baslik:</label>
-        <input 
-        onChange={(e) => onInputChange("title", e.target.value)}
-        type="text" placeholder="Kullanici adi giriniz" />
+        <input
+          onChange={(e) => onInputChange("title", e.target.value)}
+          type="text"
+          placeholder="Kullanici adi giriniz"
+        />
       </fieldset>
 
       <fieldset>
         <label htmlFor="">Text:</label>
-        <textarea 
-        onChange={(e) => onInputChange("text", e.target.value)}/>
+        <textarea onChange={(e) => onInputChange("text", e.target.value)} />
       </fieldset>
 
       <button type="submit">Gonder</button>

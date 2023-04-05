@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const AddPostController = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const model = new AddPostModel();
   const [form, setForm] = useState(model.state);
 
@@ -21,19 +21,17 @@ const AddPostController = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-        // formların doluluğunu kontrol etme
-        if (!form.title || !form.user || !form.text) {
-            alert('Formu Doldurun');
-        
-          } 
-          // eger hepsi doluysa gonderme islemi
-          axios.post('http://localhost:3004/post',form)
-          .then(res=>navigate('/'))
-          
+    // formların doluluğunu kontrol etme
+    if (!form.title || !form.user || !form.text) {
+      alert("Formu Doldurun");
+    }
+    // eger hepsi doluysa gonderme islemi
+    axios.post("http://localhost:3004/post", form).then((res) => navigate("/"));
   };
 
-  return <AddPostView onInputChange={onInputChange}
-   handleSubmit={handleSubmit} />;
+  return (
+    <AddPostView onInputChange={onInputChange} handleSubmit={handleSubmit} />
+  );
 };
 
 export default AddPostController;
